@@ -11,10 +11,10 @@
         <img src="https://via.placeholder.com/600x400" alt="No image available" class="iamg">
       <% } %>
     </div>
-    <div class="right">
+    <!-- <div class="right">
       <div class="top"><img src="https://i.pinimg.com/564x/d3/47/b7/d347b79d7ee882e8b89d29028315b98a.jpg" alt="" class="iamg"></div>
       <div class="bottom"><img src="https://i.pinimg.com/564x/ff/36/b6/ff36b62a42178ca8fe1b89be78c5df77.jpg" alt="" class="iamg"></div>
-    </div>
+    </div> -->
   </div>
 
   <div class="row">
@@ -28,7 +28,7 @@
         <% } %>
         <hr>
         <p class="introduction" id="description"><%= listing.description %></p>
-        <div class="read_more" style="display: none;">
+        <!-- <div class="read_more" style="display: none;">
           <p><%= listing.description %></p>
           <hr>
           <div class="category mt-2 mb-2">
@@ -46,13 +46,13 @@
             </div>
           </div>
           <hr>
-        </div>
+        </div> -->
 
-        <button class="read-more cont btn btn-dark btn-sm">READ MORE</button>
-        <button class="read-less cont btn btn-dark btn-sm" style="display: none;">READ LESS</button>
+        <!-- <button class="read-more cont btn btn-dark btn-sm">READ MORE</button>
+        <button class="read-less cont btn btn-dark btn-sm" style="display: none;">READ LESS</button> -->
         <hr>
 
-        <p>Price: ₹<%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> / night</p><hr>
+        <p>Price: ₹<%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> / day</p><hr>
         <p>Location: <%= listing.location %></p><hr>
         <p>Country: <%= listing.country %></p>
       </div>
@@ -71,7 +71,7 @@
     <div class="col-md-5" style="margin-left: 5.2rem;">
       <div class="card mt-3" style="padding: 1rem; box-shadow: 10px 10px 5px rgba(139, 136, 136, 0.438);">
         <div class="card-body">
-          <h5 class="card-title">₹<%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> / night</h5>
+          <h5 class="card-title">₹<%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> / day</h5>
           <hr>
           <form>
             <div class="mb-3">
@@ -83,7 +83,7 @@
               <input type="number" name="Booked[days]" class="form-control" id="days" required />
             </div>
           </form>
-          <a href="#" class="btn btn-danger">Book The Hotel</a>
+          <a href="#" class="btn btn-danger">Book Destination</a>
         </div>
       </div>
     </div>
