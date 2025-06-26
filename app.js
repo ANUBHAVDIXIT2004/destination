@@ -98,8 +98,9 @@ async function main() {
 
 
 app.get("/", (req, res) => {
-  res.send("listings/home.ejs");
+  res.render("listings/home");
 });
+
 
 app.use("/",userRouter);
 app.use("/listings" , listingRouter);

@@ -1,352 +1,236 @@
 const sampleListings = [
   {
-    title: "Cozy Beachfront Cottage",
-    description:
-      "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "New York Public Library",
+    description: "A classic NYC venue with marble columns, grand staircases, and soaring ceilings—ideal for a glamorous wedding.",
+    image: { filename: "listingimage", url: "https://hips.hearstapps.com/hmg-prod/images/gallery-1483118155-hbz-real-wedding-ann-brady-23-1563915431.jpg" },
     price: 1500,
-    location: "Malibu",
-    country: "United States",
+    location: "New York, NY",
+    country: "USA"
   },
   {
-    title: "Modern Loft in Downtown",
-    description:
-      "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Villa Balbiano",
+    description: "A historic villa on Lake Como with romantic gardens, vintage interiors, and lakeside views for a fairy-tale wedding.",
+    image: { filename: "listingimage", url: "https://hips.hearstapps.com/hmg-prod/images/5922589353-dfdd4568c3-b-1573665418.jpg" },
     price: 1200,
-    location: "New York City",
-    country: "United States",
+    location: "Ossuccio, Lake Como",
+    country: "Italy"
   },
   {
-    title: "Mountain Retreat",
-    description:
-      "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Historic Royal Palaces",
+    description: "Choose from iconic venues like Kensington Palace or Hampton Court for a wedding with royal grandeur.",
+    image: { filename: "listingimage", url: "https://hips.hearstapps.com/hmg-prod/images/https-historicroyalpalaces-picturepark-com-go-inyf4kvh-v-740-29-1573666815.jpeg" },
     price: 1000,
-    location: "Aspen",
-    country: "United States",
+    location: "London",
+    country: "United Kingdom"
   },
   {
-    title: "Historic Villa in Tuscany",
-    description:
-      "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Blackberry Farm",
+    description: "A 4,200-acre luxury estate in the Smoky Mountains with pastoral charm, fine dining, and natural beauty.",
+    image: { filename: "listingimage", url: "https://hips.hearstapps.com/hmg-prod/images/09-blackberry-farm-wedding-ceremony-1000x681at2x-1573161120.jpg" },
     price: 2500,
-    location: "Florence",
-    country: "Italy",
+    location: "Walland, TN",
+    country: "USA"
   },
   {
-    title: "Secluded Treehouse Getaway",
-    description:
-      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Hotel du Cap-Eden-Roc",
+    description: "An exclusive resort on the French Riviera offering waterfront ceremonies and lush gardens.",
+    image: { filename: "listingimage", url: "https://hips.hearstapps.com/hmg-prod/images/hotel-du-cap-eden-roc-instagram-1573663101.png" },
     price: 800,
-    location: "Portland",
-    country: "United States",
+    location: "Antibes",
+    country: "France"
   },
   {
-    title: "Beachfront Paradise",
-    description:
-      "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Hayfield Catskills",
+    description: "Rustic-meets-modern barn venue nestled in the scenic Catskills with wide fields and wood-beamed halls.",
+    image: { filename: "listingimage", url: "https://hips.hearstapps.com/hmg-prod/images/hbz-real-weddings-olivia-matt-31-1524678088.jpg" },
     price: 2000,
-    location: "Cancun",
-    country: "Mexico",
+    location: "Maplecrest, NY",
+    country: "USA"
   },
   {
-    title: "Rustic Cabin by the Lake",
-    description:
-      "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "The Little Nell",
+    description: "A mountain-top venue with gondola access and stunning views of Colorado’s Maroon Bells.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUPQmyZLaB7liOc8X2X5OYt646ABSSHeqcbg&s" },
     price: 900,
-    location: "Lake Tahoe",
-    country: "United States",
+    location: "Aspen, CO",
+    country: "USA"
   },
   {
-    title: "Luxury Penthouse with City Views",
-    description:
-      "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "San Ysidro Ranch",
+    description: "A secluded Santa Barbara estate with rose gardens, ocean views, and old-Hollywood glamour.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Cag7UUWDJ3WZyaIOCnI8KovESb33VVTNtg&s" },
     price: 3500,
-    location: "Los Angeles",
-    country: "United States",
+    location: "Santa Barbara, CA",
+    country: "USA"
   },
   {
-    title: "Ski-In/Ski-Out Chalet",
-    description:
-      "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "The Ranch at Rock Creek",
+    description: "Montana luxury ranch with wide-open skies, rivers, and barn receptions under the stars.",
+    image: { filename: "listingimage", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/db/22/fb/the-ranch-at-rock-creek.jpg?w=900&h=500&s=1" },
     price: 3000,
-    location: "Verbier",
-    country: "Switzerland",
+    location: "Philipsburg, MT",
+    country: "USA"
   },
   {
-    title: "Safari Lodge in the Serengeti",
-    description:
-      "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Glenmere Mansion",
+    description: "Elegant villa with Hudson Valley views, terraced gardens, and spa amenities.",
+    image: { filename: "listingimage", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/f0/0e/06/glenmere-mansion.jpg?w=700&h=-1&s=1" },
     price: 4000,
-    location: "Serengeti National Park",
-    country: "Tanzania",
+    location: "Chester, NY",
+    country: "USA"
   },
   {
-    title: "Historic Canal House",
-    description:
-      "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Oheka Castle",
+    description: "A French-style chateau on Long Island with grand ballrooms and manicured gardens.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjbCXE9M9T4kb0wXjwaZuTT4MvWE50LDAPw&s" },
     price: 1800,
-    location: "Amsterdam",
-    country: "Netherlands",
+    location: "Huntington, NY",
+    country: "USA"
   },
   {
-    title: "Private Island Retreat",
-    description:
-      "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1618140052121-39fc6db33972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9kZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Il Borro",
+    description: "A Tuscan estate with medieval charm, vineyards, and rustic-luxe villas for guests.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXZFqMf86pW8E4HASSQQBA37Rm0VkebbSX0g&s" },
     price: 10000,
-    location: "Fiji",
-    country: "Fiji",
+    location: "San Giustino Valdarno",
+    country: "Italy"
   },
   {
-    title: "Charming Cottage in the Cotswolds",
-    description:
-      "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhY2glMjB2YWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "The Breakers Palm Beach",
+    description: "Gilded Age glamour meets tropical scenery at this beachfront resort.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWZGjhMU8ngc064uYg8S72VTMFaPKOuHWDg&s" },
     price: 1200,
-    location: "Cotswolds",
-    country: "United Kingdom",
+    location: "Palm Beach, FL",
+    country: "USA"
   },
   {
-    title: "Historic Brownstone in Boston",
-    description:
-      "Step back in time in this elegant historic brownstone located in the heart of Boston.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Rosecliff Mansion",
+    description: "Newport mansion modeled after Versailles, perfect for elegant ballroom ceremonies.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX2W18Rvn40sxBzO8af6-xMTbmIh8nkXH9Zg&s" },
     price: 2200,
-    location: "Boston",
-    country: "United States",
+    location: "Newport, RI",
+    country: "USA"
   },
   {
-    title: "Beachfront Bungalow in Bali",
-    description:
-      "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602391833977-358a52198938?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "The Biltmore Estate",
+    description: "America’s largest private home offers mountain backdrops and 19th-century grandeur.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfZeoA-ThItj9BqmLbs18bWPhDzjA70hjLSw&s" },
     price: 1800,
-    location: "Bali",
-    country: "Indonesia",
+    location: "Asheville, NC",
+    country: "USA"
   },
   {
-    title: "Mountain View Cabin in Banff",
-    description:
-      "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Cal-a-Vie Health Spa",
+    description: "A Provence-inspired wellness retreat with lavender fields and Mediterranean charm.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaTcrYAbPIpAjEqQoDw6D95y4O6nFvUYM0jg&s" },
     price: 1500,
-    location: "Banff",
-    country: "Canada",
+    location: "Vista, CA",
+    country: "USA"
   },
   {
-    title: "Art Deco Apartment in Miami",
-    description:
-      "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
-    image: {
-      filename: "listingimage",
-      url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Aman Venice",
+    description: "Lavish palazzo on the Grand Canal with chandeliers, frescoed ceilings, and a private garden.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdmxeK_juIosOlGhAYHvWe9XYDWHTeoiCXvw&s" },
     price: 1600,
-    location: "Miami",
-    country: "United States",
+    location: "Venice",
+    country: "Italy"
   },
   {
-    title: "Tropical Villa in Phuket",
-    description:
-      "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1470165301023-58dab8118cc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Amangiri",
+    description: "Minimalist desert hideaway with sandstone canyons and surreal sunsets.",
+    image: { filename: "listingimage", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/54/4c/a2/amangiri-pavilion-and.jpg?w=900&h=500&s=1" },
     price: 3000,
-    location: "Phuket",
-    country: "Thailand",
+    location: "Canyon Point, UT",
+    country: "USA"
   },
   {
-    title: "Historic Castle in Scotland",
-    description:
-      "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1585543805890-6051f7829f98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJlYWNoJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Kualoa Ranch",
+    description: "A Hawaiian paradise featured in Hollywood films, with rainforest mountains and ocean views.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKJ-LN-hD-y_cDt1H9xS5p0XmcD23qBVtNWg&s" },
     price: 4000,
-    location: "Scottish Highlands",
-    country: "United Kingdom",
+    location: "Oahu, HI",
+    country: "USA"
   },
   {
-    title: "Desert Oasis in Dubai",
-    description:
-      "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Alila Villas Uluwatu",
+    description: "Cliffside Balinese resort with dramatic ocean backdrops and sleek architecture.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKKpYVEgDC82096viOLl3GeN5Vza2urSTosg&s" },
     price: 5000,
-    location: "Dubai",
-    country: "United Arab Emirates",
+    location: "Bali",
+    country: "Indonesia"
   },
   {
-    title: "Rustic Log Cabin in Montana",
-    description:
-      "Unplug and unwind in this cozy log cabin surrounded by the natural beauty of Montana.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "The Greenbrier",
+    description: "Historic resort with Southern elegance, a grand ballroom, and mountain views.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOC12ffyFi2ssBV-m0547dtg04r0LTv8U2jQ&s" },
     price: 1100,
-    location: "Montana",
-    country: "United States",
+    location: "White Sulphur Springs, WV",
+    country: "USA"
   },
   {
-    title: "Beachfront Villa in Greece",
-    description:
-      "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Ashford Castle",
+    description: "A storybook Irish castle with lakeside ceremonies and medieval towers.",
+    image: { filename: "listingimage", url: "https://mshanken.imgix.net/cao/16_9/glg-0915-8-1600.jpg?w=900&q=72" },
     price: 2500,
-    location: "Mykonos",
-    country: "Greece",
+    location: "Cong, County Mayo",
+    country: "Ireland"
   },
   {
-    title: "Eco-Friendly Treehouse Retreat",
-    description:
-      "Stay in an eco-friendly treehouse nestled in the forest. It's the perfect escape for nature lovers.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Andaz Maui at Wailea",
+    description: "Modern Hawaiian luxury on a private cove with beach ceremonies and local flavors.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF-SFNIzegWGNTv6ET32eespQgRmSFojJpvA&s" },
     price: 750,
-    location: "Costa Rica",
-    country: "Costa Rica",
+    location: "Maui, HI",
+    country: "USA"
   },
   {
-    title: "Historic Cottage in Charleston",
-    description:
-      "Experience the charm of historic Charleston in this beautifully restored cottage with a private garden.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "The Plaza Hotel",
+    description: "Iconic NYC hotel with the famed Grand Ballroom and timeless elegance.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-yFx3_X3vXLtqT-OirwyNkvhA1wWdur-pyg&s" },
     price: 1600,
-    location: "Charleston",
-    country: "United States",
+    location: "New York, NY",
+    country: "USA"
   },
   {
-    title: "Modern Apartment in Tokyo",
-    description:
-      "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRva3lvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Borgo Santo Pietro",
+    description: "Tuscan countryside resort with organic gardens, Michelin-starred dining, and 5-star service.",
+    image: { filename: "listingimage", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/29/02/9f/borgo-santo-pietro-property.jpg?w=900&h=-1&s=1" },
     price: 2000,
-    location: "Tokyo",
-    country: "Japan",
+    location: "Palazzetto, Tuscany",
+    country: "Italy"
   },
   {
-    title: "Lakefront Cabin in New Hampshire",
-    description:
-      "Spend your days by the lake in this cozy cabin in the scenic White Mountains of New Hampshire.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Château de Villette",
+    description: "A lavish 17th-century chateau near Paris with landscaped gardens and historic interiors.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYruOtFPIFO0t7qIUtbfNcj-vnnVnIY9ct7A&s" },
     price: 1200,
-    location: "New Hampshire",
-    country: "United States",
+    location: "Condécourt",
+    country: "France"
   },
   {
-    title: "Luxury Villa in the Maldives",
-    description:
-      "Indulge in luxury in this overwater villa in the Maldives with stunning views of the Indian Ocean.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Viceroy Los Cabos",
+    description: "Ultra-modern beach resort with infinity pools, sunset decks, and luxe villas.",
+    image: { filename: "listingimage", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/5d/c3/f3/viceroy-los-cabos.jpg?w=900&h=500&s=1" },
     price: 6000,
-    location: "Maldives",
-    country: "Maldives",
+    location: "Los Cabos",
+    country: "Mexico"
   },
   {
-    title: "Ski Chalet in Aspen",
-    description:
-      "Hit the slopes in style with this luxurious ski chalet in the world-famous Aspen ski resort.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Skibo Castle",
+    description: "Scottish Highlands estate that hosted Madonna’s wedding—privacy, moors, and magnificence.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcCPSrgP2ZXsLrrusb43uy-HFIpY04bmTiPg&s" },
     price: 4000,
-    location: "Aspen",
-    country: "United States",
+    location: "Dornoch",
+    country: "Scotland"
   },
   {
-    title: "Secluded Beach House in Costa Rica",
-    description:
-      "Escape to a secluded beach house on the Pacific coast of Costa Rica. Surf, relax, and unwind.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Necker Island",
+    description: "Richard Branson’s private Caribbean island offering exclusivity and barefoot luxury.",
+    image: { filename: "listingimage", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM3vBroSCoIKVqMER-2AqLsjXDY-lC48an1Q&s" },
     price: 1800,
-    location: "Costa Rica",
-    country: "Costa Rica",
-  },
+    location: "British Virgin Islands",
+    country: "UK"
+  }
 ];
 
 module.exports = { data: sampleListings };
