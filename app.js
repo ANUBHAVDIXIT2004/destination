@@ -27,7 +27,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const multer = require("multer");
 
-// const MongoStore = require("connect-mongo");
+const MongoStore = require("connect-mongo");
 
 
 app.engine("ejs", ejsMate);
@@ -37,21 +37,22 @@ app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+const dbUrl = process.env.ATLASDB_URL || "mongodb://localhost:27017/wanderlust";
 
-// const store = MongoStore.create({
-//   mongoUrl: dbUrl,
-//   crypto: {
-//     secret:process.env.SECRET_CODE,
-//   },
-//   touchAfter: 24 * 3600,
-// });
+const store = MongoStore.create({
+  mongoUrl: dbUrl,
+  crypto: {
+    secret:process.env.SECRET_CODE,
+  },
+  touchAfter: 24 * 3600,
+});
 
-// store.on("error",() => {
-//   console.log("ERROR in MONGO SESSION STORE",err)
-// })
+store.on("error",() => {
+  console.log("ERROR in MONGO SESSION STORE",err)
+})
 
 const sessionOptions = {
-  // store,
+  store,
   secret: "thisisasecret",
   resave: false,
   saveUninitialized:true,
@@ -83,7 +84,7 @@ app.use((req,res,next) => {
   next();
 })//middleware to make curruser available in all templates and also success and error messages
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust"
+
 main()
   .then(() => {
     console.log("connected to DB");
@@ -93,7 +94,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(dbUrl);
 }
 
 
