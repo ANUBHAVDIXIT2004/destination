@@ -17,15 +17,15 @@ module.exports.psignup = async(req,res,next) => {
         
         req.login(registeredUser, (err)=> {
             if(err){
-                next(err);
+                return next(err);
             }
             req.flash("success" , "Welcome to WanderLust");
-            res.redirect("/listings");
+            return res.redirect("/listings");
         })//login the user after registration after signup
         
     }catch(err){
         req.flash("error",err.message)
-        res.redirect("/signup");
+        return res.redirect("/signup");
     }
     
 }
