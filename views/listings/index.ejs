@@ -4,10 +4,21 @@
     <div class="option mt-3 mb-3">
 
       <div class="search">
-        <form class="d-flex airbnb-style">
-          <input class="form-control airbnb-input me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn airbnb-btn" type="submit">Search</button>
-        </form>
+        <form class="d-flex airbnb-style" action="/listings/search" method="GET">
+
+  <input 
+    class="form-control airbnb-input me-2"
+    type="search"
+    name="q"
+    placeholder="Search destinations"
+    aria-label="Search"
+  >
+
+  <button class="btn airbnb-btn" type="submit">
+    Search
+  </button>
+
+</form>
       </div>
 
       <div class="tax-switch ms-auto">

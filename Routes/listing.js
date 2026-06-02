@@ -23,6 +23,21 @@ const upload = multer({storage});
 //New Route
 router.get("/new",isLoggedIn,listingController.renderNewForm);
 
+//search from route 
+router.get("/search", async (req, res) => {
+
+    let { q } = req.query;
+
+    const listings = await Listing.find({
+        title: {
+            $regex: q,
+            $options: "i",
+        },
+    });
+
+    res.render("listings/index.ejs", { allListings: listings });
+});
+
 //Edit Route
 router.get("/:id/edit",isLoggedIn,isOwner, wrapAsync(listingController.edit));
 
