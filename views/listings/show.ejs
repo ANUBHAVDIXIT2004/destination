@@ -83,7 +83,29 @@
               <input type="number" name="Booked[days]" class="form-control" id="days" required />
             </div>
           </form>
-          <a href="#" class="btn btn-danger">Book Destination</a>
+          <form action="/payment/create-order/<%= listing._id %>" method="POST">
+
+  <input 
+    type="hidden"
+    name="days"
+    id="hiddenDays"
+  >
+
+  <button type="submit" class="btn btn-danger w-100">
+    Book Destination
+  </button>
+
+</form>
+<script>
+
+const daysInput = document.getElementById("days");
+const hiddenDays = document.getElementById("hiddenDays");
+
+daysInput.addEventListener("input", () => {
+    hiddenDays.value = daysInput.value;
+});
+
+</script>
         </div>
       </div>
     </div>

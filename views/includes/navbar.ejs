@@ -15,10 +15,10 @@
         </button>
         <div class="navbar-nav ms-auto">
           <a class="nav-link" href="/listings/new">Add Your Spot</a>
-          <% if(curruser){ %>
+          <% if(typeof curruser !== 'undefined' && curruser){ %>
             <a class="nav-link" href="/Logout">Log out</a>
           <% } %>
-          <% if(!curruser){ %>
+          <% if(typeof curruser === 'undefined' || !curruser){ %>
             <a class="nav-link" aria-current="page" href="/signup">Sign up</a>
             <a class="nav-link" href="/Login">Log in</a>
             <% } %>
