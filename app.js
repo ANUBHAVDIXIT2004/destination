@@ -37,7 +37,7 @@ app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use("/payment", paymentRouter);
-const dbUrl = "mongodb://127.0.0.1:27017/wanderlust";
+const dbUrl = process.env.ATLASDB_URL;
 
 // const store = MongoStore.create({
 //   mongoUrl: dbUrl,
