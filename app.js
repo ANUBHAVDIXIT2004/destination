@@ -2,7 +2,7 @@ if(process.env.NODE_ENV != "production"){
   require("dotenv").config();
 // process.env.
 }
-const paymentRouter = require("./Routes/payment");
+// const paymentRouter = require("./Routes/payment");
 const express = require("express");
 const app = express();
 
@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use("/payment", paymentRouter);
+// app.use("/payment", paymentRouter);
 const dbUrl = process.env.ATLASDB_URL;
 
 // const store = MongoStore.create({
